@@ -60,8 +60,8 @@ After running the load for few load cycles, create a cloud watch dashboard of th
 
 ![over all load](./all.before.png)
 
-![504 errors](./504.png)
+![504 errors](./504.before.png)
 
-![502 errors](./502.png)
+![502 errors](./502.before.png)
 
 In both cases, we noticed growing error rate during node scale down.
