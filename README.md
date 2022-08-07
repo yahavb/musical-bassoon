@@ -1,8 +1,7 @@
 # musical-bassoon
 application-health-sample-for-aws-load-balancer-controller
 
-This sample deploys a web application behind ALB and demonstrates seamless failover between pods during scale down event triggered by cluster autoscaler or karpenter. We first deploy EKS cluser, enable Amazon CNI to enable IP-based ALB target, deploy aws-loadbalancer controller add-on, then we deploy a smaple django app that get simulated requests from a load simulator that chages the application replica-set size. We also deploy cluster autoscaler that changes the autoscale-group size to fulfill the django app pods needs. 
-We observe the application health during scale-down events during the load end. We emphesize the need for accurate health check to achieve the smooth failover. 
+This sample deploys a web application behind ALB and demonstrates seamless failover between pods during scale down event triggered by cluster autoscaler or karpenter. We first install EKS cluser, enable Amazon CNI to enable IP-based ALB target, install aws-loadbalancer controller add-on, then we deploy a simple Django app that gets simulated requests from a load simulator that changes the application replica-set size. Additionally, we deploy cluster autoscaler which changes the autoscale-group size to suit the needs of Django app pods. We monitor the application's health during scale-down events. We emphesize the need for an accurate health checks to ensure smooth failover. 
 
 * deploy EKS cluster 
 
