@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-app
+  namespace: default
+  labels:
+    app: django-app
+spec:
+  selector:
+    matchLabels:
+      app: django-app
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+        - name: app
+          image: 604429864555.dkr.ecr.us-west-2.amazonaws.com/djangoapp:py39aarch64
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 512m
+              memory: 512Mi
+          ports:
+            - containerPort: 8000
+      terminationGracePeriodSeconds: 120
